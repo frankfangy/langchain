@@ -2,7 +2,7 @@ from langchain_community.chat_models import ChatZhipuAI
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
  
 # 初始化GLM-4模型
-chat = ChatZhipuAI(
+llm = ChatZhipuAI(
     model="glm-4",
     temperature=0.5 
   )
@@ -15,5 +15,5 @@ messages = [
 ]
 
 # 调用模型生成回复
-response = chat.invoke(messages)
+response = llm.invoke(messages)
 print(response.content)
